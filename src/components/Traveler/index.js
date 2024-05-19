@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import IndividualDashboard from "../IndividualDashboard";
-// import "./index.css";
+import "./index.css";
 const Traveler = () => {
   const [city, setCity] = useState("amalapuram");
   const [inpValue, setInpValue] = useState("amalapuram");
