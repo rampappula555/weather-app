@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import WeatherMap from "../WeatherMap";
 import "./index.css";
-import { RotatingLines } from "react-loader-spinner";
+import { BallTriangle } from "react-loader-spinner";
 import WeatherDataCard from "../WeatherDataCard";
 import { MdArrowUpward } from "react-icons/md";
 import { FaArrowDownLong } from "react-icons/fa6";
@@ -94,16 +94,15 @@ const WeatherDashboard = () => {
   function getLoadingView() {
     return (
       <div className="load-spinner-container">
-        <RotatingLines
-          visible={true}
-          height="96"
-          width="96"
+        <BallTriangle
+          height={100}
+          width={100}
+          radius={5}
           color="#3f51b5"
-          strokeWidth="5"
-          animationDuration="0.75"
-          ariaLabel="rotating-lines-loading"
+          ariaLabel="ball-triangle-loading"
           wrapperStyle={{}}
           wrapperClass=""
+          visible={true}
         />
       </div>
     );
@@ -160,6 +159,7 @@ const WeatherDashboard = () => {
         <h1>Real-time Data Dashboard</h1>
         <div className="location-input">
           <input
+            name="userinput"
             type="search"
             value={inputValue}
             onChange={handleInputChange}

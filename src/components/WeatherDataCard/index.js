@@ -9,13 +9,14 @@ import {
   ResponsiveContainer,
 } from "recharts";
 function WeatherDataCard({ graphData, stroke }) {
+  const obj = {};
   return (
     <ResponsiveContainer width="100%" height={300}>
       <LineChart data={graphData}>
         <Line type="monotone" dataKey="value" stroke={stroke} />
         <CartesianGrid stroke="#ccc" />
         <XAxis dataKey="name" />
-        <YAxis />
+        <YAxis {...obj} />
         <Tooltip />
         <Legend />
       </LineChart>
